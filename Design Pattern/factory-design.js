@@ -1,6 +1,6 @@
 const employees = [];
-function say() {
-  console.log("Hi, I am " + this.name + " and I am a " + this.type);
+function getEmployeeData() {
+  console.log(`My Name is  ${this.name}  and I am a ${this.type}`);
 }
 function Developer(name) {
   this.name = name;
@@ -30,5 +30,5 @@ employees.push(employeeFactory.create("Rahul", 2));
 employees.push(employeeFactory.create("Rafael", 1));
 
 employees.forEach((emp) => {
-  say.call(emp);
+  getEmployeeData.call(emp);
 });
